@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial,san-serif;
+	font-display: swap;
+}
+
+div.container {
+	margin-top: 30px;
+}
+
+body {
+	background-color: #ebebeb;
+	
+}
+
+h1 {
+	text-align: center;
+	margin: 20px;
+	padding: 10px;
+	color: #2b3e50;
+}
+

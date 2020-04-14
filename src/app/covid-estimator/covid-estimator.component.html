@@ -1,0 +1,69 @@
+<div class="body col-md-9">
+	<h1>{{title}}</h1>
+	<hr>
+	<form [formGroup] = "newEstimateForm" autocomplete="off">
+		<div  class="form-group" [ngClass]="{'error': region.invalid && region.dirty}">
+			<label for="region">Region</label>
+			<em *ngIf="region.invalid && region.dirty">Required</em>
+			<select formControlName="region" id="region" class="form-control">
+				<option value="">Select Region</option>
+				<option value="1">Africa</option>
+				<option value="2">Asia</option>
+				<option value="3">Europe</option>
+				<option value="4">North America</option>
+				<option value="5">South America</option>
+				<option value="6">Oceania</option>
+			</select>
+		</div>
+		<div class="row">
+			<div class="col-md-4" [ngClass]="{'error': age.invalid && age.dirty}">
+				<label for="averageAge">Average Age</label>
+				<em *ngIf="age.invalid && age.dirty">Required</em>
+				<input formControlName="age" id="averageAge" class="form-control" type="text" placeholder="Average Age">
+			</div>
+			<div class="col-md-4" [ngClass]="{'error': dailyIncome.invalid && dailyIncome.dirty}">
+				<label for="averageDailyIncome">Average Daily Income</label>
+				<em *ngIf="dailyIncome.invalid && dailyIncome.dirty">Required</em>
+				<input formControlName="dailyIncome" id="averageDailyIncome" class="form-control" type="text" placeholder="Average Daily Income">
+			</div>
+			<div class="col-md-4" [ngClass]="{'error': dailyIncomePopulation.invalid && dailyIncomePopulation.dirty}">
+				<label for="averageDailyIncomePopulation">Average Daily Income Population</label>
+				<em *ngIf="dailyIncomePopulation.invalid && dailyIncomePopulation.dirty">Required</em>
+				<input formControlName="dailyIncomePopulation" id="averageDailyIncomePopulation" class="form-control" type=""placeholder="Average Daily Income Population">
+			</div>
+		</div>
+		<div  class="form-group" [ngClass]="{'error': period.invalid && period.dirty}">
+			<label data-period-type for="periodType" >Period Type</label>
+			<em *ngIf="period.invalid && period.dirty">Required</em>
+			<select formControlName="period" id="periodType" class="form-control">
+				<option value="">Select Period Type</option>
+				<option value="1">Days</option>
+				<option value="2">Weeks</option>
+				<option value="3">Months</option>
+			</select>
+		</div>
+		<div class="form-group" [ngClass]="{'error': time.invalid && time.dirty}">
+			<label for="timeToElapse">Time To Elapse</label>
+			<em *ngIf="time.invalid && time.dirty">Required</em>
+			<input formControlName="time" data-time-to-elapse id="timeToElapse" class="form-control" type=""placeholder="Time To Elapse">
+		</div>
+		<div class="form-group" [ngClass]="{'error': reportedCases.invalid && reportedCases.dirty}">
+			<label for="reportedCases">Reported Cases</label>
+			<em *ngIf="reportedCases.invalid && reportedCases.dirty">Required</em>
+			<input formControlName="reportedCases" data-reported-cases id="reportedCases" class="form-control" type="" placeholder="Reported Cases">
+		</div>
+		<div  class="form-group" [ngClass]="{'error': population.invalid && population.dirty}">
+			<label for="population">Population</label>
+			<em *ngIf="population.invalid && population.dirty">Required</em>
+			<input formControlName="population" data-population id="population" class="form-control" type="" placeholder="Population">
+		</div>
+        <div  class="form-group" [ngClass]="{'error': hospitalBeds.invalid && hospitalBeds.dirty}">
+			<label for="totalHospitalBeds">Total Hospital Beds</label>
+			<em *ngIf="hospitalBeds.invalid && hospitalBeds.dirty">Required</em>
+			<input formControlName="hospitalBeds" data-total-hospital-beds id="totalHospitalBeds" class="form-control" type="" placeholder="Total Hospital Beds">
+		</div>
+		<button type="button" [disabled]="newEstimateForm.invalid" class="btn btn-default" data-go-estimate>GO ESTIMATE</button>
+		
+	</form>
+</div>
+
