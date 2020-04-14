@@ -33,9 +33,9 @@
 			</div>
 		</div>
 		<div  class="form-group" [ngClass]="{'error': period.invalid && period.dirty}">
-			<label data-period-type for="periodType" >Period Type</label>
+			<label for="periodType" >Period Type</label>
 			<em *ngIf="period.invalid && period.dirty">Required</em>
-			<select formControlName="period" id="periodType" class="form-control">
+			<select formControlName="period" data-period-type id="periodType" class="form-control">
 				<option value="">Select Period Type</option>
 				<option value="1">Days</option>
 				<option value="2">Weeks</option>
