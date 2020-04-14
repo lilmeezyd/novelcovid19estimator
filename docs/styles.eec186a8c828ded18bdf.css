@@ -160,12 +160,7 @@ h1 {
     user-select: none
 }
 
-.btn.disabled,.btn[disabled] .btn {
-    cursor: not-allowed;
-    opacity: .65;
-    filter: alpha(opacity=65);
-    box-shadow: none
-}   
+   
 
 .btn-default {
     color: #fff;
@@ -201,6 +196,3 @@ h1 {
     padding: 10px;
     color: #2b3e50
 }
-@font-face {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial,san-serif;
-    font-display: swap; }
